@@ -1,14 +1,14 @@
 class PlantsController < ApplicationController
     def index
-        plants = Plant.
-        render json: plants
+        plant = Plant.all
+        render json: plant
     end 
     def show
-        plants = Plant.find_by(id: params[:id])
-        render json: plants 
+        plant = Plant.find_by(id: params[:id])
+        render json: plant 
     end
     def create
-        plants = Plant.create(params.permit(:name, :image, :price))
-        render json: plants, status: :created
+        plant = Plant.create(params.permit(:name, :image, :price))
+        render json: plant, status: :created
     end
 end
