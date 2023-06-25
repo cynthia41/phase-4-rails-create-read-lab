@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe Plant, type: :model do
   let!(:plant) { Plant.new(name: "Aloe", image: "./images/aloe.jpg", price: 15.99) }
 
